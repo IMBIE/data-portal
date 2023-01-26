@@ -1,0 +1,294 @@
+[
+  {
+    "title": "Required Data",
+    "name": "required",
+    "description": "IMBIE Altimetry data upload",
+    "text": "Please confirm which data you are contributing to the IMBIE altimetry experiment group.",
+
+    "elements": [
+      {
+        "name": "time-series-sheets",
+        "label": "1a. Time-series of mass change, mass change uncertainty, and of observed area:",
+        "type": "checkbox",
+        "options": [
+          { "value": "eais", "label": "East Antartica Ice Sheet" },
+          { "value": "wais", "label": "West Antartica Ice Sheet" },
+          { "value": "apis", "label": "Antartic Peninsula Ice Sheet" },
+          { "value": "gris", "label": "Greenland Ice Sheet" }
+        ]
+      },
+      {
+        "name": "time-series-upload",
+        "label": "1b. Upload a single, concatenated, time-series data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "file"
+      },
+      {
+        "name": "mean-rate-sheets",
+        "label": "2a. Rates of mass change and their uncertainties, and the observed areas and time intervals over which these are calculated. <strong>Remember these data will form the basis of our mass balance aggregation, and so you should supply estimates for each region over as many time intervals as your method allows with confidence (your time intervals may overlap).</strong>",
+        "type": "checkbox",
+        "options": [
+          { "value": "eais", "label": "East Antartica Ice Sheet" },
+          { "value": "wais", "label": "West Antartica Ice Sheet" },
+          { "value": "apis", "label": "Antartic Peninsula Ice Sheet" },
+          { "value": "gris", "label": "Greenland Ice Sheet" }
+        ]
+      },
+      {
+        "name": "mean-rate-upload",
+        "label": "2b. Upload a single, concatenated, rate of mass change data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "file"
+      }
+    ]
+  },
+  {
+    "title": "Supporting Information",
+    "name": "supporting",
+    "description": "Additional metadata about your submission",
+    "text": "Please answer the following questions relating to the data set you are submitting to the IMBIE altimetry experiment group.",
+
+    "elements": [
+      {
+        "name": "missions",
+        "label": "3. Which mission(s) have you employed in your altimetry mass balance calculation?",
+        "type": "checkbox",
+
+        "options": [
+          { "label": "ERS-1", "value": "ers-1" },
+          { "label": "ERS-2", "value": "ers-2" },
+          { "label": "ENVISAT", "value": "envisat" },
+          { "label": "ICESat", "value": "icesat" },
+          { "label": "CryoSat-2", "value": "cryosat-2" },
+          { "label": "Altika", "value": "altika" },
+          { "label": "Sentinel-3", "value": "sentinel-3" },
+          { "label": "Airborne", "value": "airborne" },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "elevation-methods",
+        "label": "4. Which general method(s) have you employed to compute elevation changes?",
+        "type": "checkbox",
+
+        "options": [
+          { "label": "Cross-overs", "value": "cross-overs" },
+          { "label": "Repeat Track", "value": "repeat-track" },
+          { "label": "Plane Fit", "value": "plane-fit" },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "unobserved-methods",
+        "label": "5. Which general method(s) have you employed to estimate elevation changes in unobserved regions?",
+        "type": "checkbox",
+
+        "options": [
+          {
+            "label": "Scaling according to ratio of basin area to observed area",
+            "value": "scaling"
+          },
+          {
+            "label": "Interpolation",
+            "value": "interpolation"
+          },
+          {
+            "label": "Assign Specific Value",
+            "value": "specific-value"
+          },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "independant-observations",
+        "label": "6. Which independent observations have you used to evaluate the elevations rates you have determined from altimetry?",
+        "type": "checkbox",
+
+        "options": [
+          { "label": "Airborne", "value": "airborne" },
+          { "label": "Ground-based", "value": "ground-based" },
+          {
+            "label": "Independent Satellite",
+            "value": "satellite"
+          },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "gia-models",
+        "label": "7. Which model(s) have you employed to account for glacial isostatic adjustment in your mass balance calculation?",
+        "type": "citations"
+      },
+      {
+        "name": "icesat-methods",
+        "label": "8. Which general method(s) have you employed to account for ICESat inter-campaign bias?",
+        "type": "checkbox",
+
+        "options": [
+          { "label": "Not Applicable", "value": "n-a" },
+          { "label": "None", "value": "none" },
+          {
+            "label": "Applied Gaussian-Centroid correction to data that did not include it",
+            "value": "gaussian-centroid"
+          },
+          {
+            "label": "Correction based on a target outside the study area",
+            "value": "outside-area"
+          },
+          {
+            "label": "Correction from the scientific literature (provide citation)",
+            "value": "citation",
+            "editable": true
+          },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "mass-change-methods",
+        "label": "9. Which general method(s) have you employed to compute ice sheet mass changes from ice sheet volume changes?",
+        "type": "checkbox",
+
+        "options": [
+          {
+            "label": "Constant/Uniform Density",
+            "value": "constant"
+          },
+          {
+            "label": "Spatially variable, temporally constant density",
+            "value": "space-variable"
+          },
+          {
+            "label": "Firn model driven by climate or reanalysis data",
+            "value": "firn-climate"
+          },
+          {
+            "label": "Firn model driven by other data",
+            "value": "firn-other"
+          },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "methods-and-errors",
+        "label": "10. Upload a document describing your mass balance methods and errors in full. This must be either a peer reviewed journal article or a document suitable for review by the IMBIE executive committee. (If you wish to upload multiple files, please upload them as a single .zip file)",
+        "type": "file"
+      }
+    ]
+  },
+  {
+    "title": "Additional Experiments",
+    "name": "additional",
+    "description": "Data for additional IMBIE analyses",
+    "text": "The IMBIE altimetry experiment group may perform additional analyses to investigate methodological differences in more detail. These experiments are optional. If you wish to participate in the additional experiments, please confirm which data you are contributing.",
+
+    "elements": [
+      {
+        "name": "participating",
+        "label": "11. Do you wish to participate?",
+        "type": "radio",
+
+        "options": [
+          {
+            "label": "Participating",
+            "value": "yes",
+            "default": true
+          },
+          { "label": "Not Participating", "value": "no" }
+        ]
+      },
+      {
+        "name": "volume-change",
+        "label": "12a. Time-series of volume change and of volume change uncertainty for regions above and below 1500m in elevation.",
+        "type": "checkbox",
+        "options": [
+          { "value": "eais", "label": "East Antartica Ice Sheet" },
+          { "value": "wais", "label": "West Antartica Ice Sheet" },
+          { "value": "apis", "label": "Antartic Peninsula Ice Sheet" },
+          { "value": "gris", "label": "Greenland Ice Sheet" }
+        ]
+      },
+      {
+        "name": "volume-change-upload",
+        "label": "12b. Upload a data file and a metadata file describing the data file contents and format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "file",
+
+        "options": [
+          {
+            "name": "volume-change-data",
+            "label": "Upload a data file",
+            "type": "upload"
+          },
+          {
+            "name": "volume-change-meta",
+            "label": "Upload a metadata file",
+            "type": "upload"
+          }
+        ]
+      },
+      {
+        "name": "firn-volume-change",
+        "label": "13a. Time-series of firn volume change and of firn volume change uncertainty for regions above and below 1500m elevation",
+        "type": "checkbox",
+        "options": [
+          { "value": "eais", "label": "East Antartica Ice Sheet" },
+          { "value": "wais", "label": "West Antartica Ice Sheet" },
+          { "value": "apis", "label": "Antartic Peninsula Ice Sheet" },
+          { "value": "gris", "label": "Greenland Ice Sheet" }
+        ]
+      },
+      {
+        "name": "firn-volume-change-upload",
+        "label": "13b. Upload a data file and a metadata file describing the data file contents and format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "file",
+
+        "options": [
+          {
+            "name": "firn-volume-change-data",
+            "label": "Upload a data file",
+            "type": "file"
+          },
+          {
+            "name": "firn-volume-change-meta",
+            "label": "Upload a metadata file",
+            "type": "file"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Other Information",
+    "name": "information",
+    "description": "Any other comments about your submission",
+
+    "elements": [
+      {
+        "name": "comments",
+        "label": "14. Is there anything else you would like to tell us about in relation to your submission to the IMBIE altimetry experiment group?",
+        "type": "textarea"
+      }
+    ]
+  }
+]

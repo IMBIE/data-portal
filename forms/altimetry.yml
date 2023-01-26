@@ -1,0 +1,34 @@
+name: Radar Altimetry
+pages:
+  - name: Required Data
+    questions:
+      - index: 1a
+        prompt: "Time-series of mass change, mass change uncertainty, and of observed area:"
+        type: checkbox
+        options:
+          - East Antarctic Ice Sheet
+          - West Antarctic Ice Sheet
+          - Antartic Peninsula Ice Sheet
+          - Greenland Ice Sheet
+      - index: 1b
+        prompt: Upload a single, concatenated, time-series data file, following
+         the IMBIE standard file format. Please do not apply any temporal smoothing
+         to your data, other than that required as part of your basic retrieval.
+        type: upload
+      - index: 2a
+        prompt: Rates of mass change and their uncertainties, and the observed areas
+        and time intervals over which these are calculated. *Remember that these data
+        will form the basis of our mass balance aggregation, and so you should supply
+        estimates for each region over as many time intervals as your method allows
+        with confidence.*
+        type: checkbox
+        options:
+          - East Antarctic Ice Sheet
+          - West Antarctic Ice Sheet
+          - Antartic Peninsula Ice Sheet
+          - Greenland Ice Sheet
+      - index: 2b
+        prompt: Upload a single, concatenated, rate of mass change data file,
+        following the IMBIE standard file format. Please do not apply any
+        temporal smoothing to your data, other than that required as part of
+        your basic retrieval.

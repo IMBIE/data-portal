@@ -1,0 +1,219 @@
+[
+  {
+    "title": "Contact Details",
+    "name": "contact",
+    "text": "Please confirm your contact details",
+    "order": 1,
+
+    "questions": [
+      {
+        "name": "forename",
+        "text": "First Name",
+        "type": "contact"
+      },
+      {
+        "name": "lastname",
+        "text": "Surname",
+        "type": "contact"
+      },
+      {
+        "name": "organisation",
+        "text": "Organisation",
+        "type": "contact"
+      },
+      {
+        "name": "email",
+        "text": "Email Address",
+        "type": "contact"
+      },
+      {
+        "name": "phone",
+        "text": "Telephone Number",
+        "type": "contact"
+      }
+    ]
+  },
+  {
+    "title": "Required Data",
+    "name": "required",
+    "text": "Please indicate which data you are contributing to the IMBIE SMB experiment group.",
+    "order": 2,
+
+    "questions": [
+      {
+        "name": "mass-balance-sheets",
+        "text": "1a. Time-series of surface mass balance, and its associated uncertainty:",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "mass-balance-upload",
+        "text": "1b. Upload a data file and a metadata file describing the data file contents and format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads"
+      },
+      {
+        "name": "gridded-mass-balance-sheets",
+        "text": "2a. A gridded time-series of surface mass balance, and its associated uncertainty. <strong>Remember these data will form the basis of our mass balance aggregation, and so you should supply estimates for each region over as many time intervals as your method allows with confidence (your time intervals may overlap).</strong>",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "gridded-mass-balance-upload",
+        "text": "2b. Upload a data file and a metadata file describing the data file contents and format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads"
+      }
+    ]
+  },
+  {
+    "title": "Supporting Information",
+    "name": "supporting",
+    "text": "Please answer the following questions relating to the data set you are submitting to the IMBIE SMB experiment group.",
+    "order": 3,
+
+    "questions": [
+      {
+        "name": "boundaries-data",
+        "text": "3. Which meteorological data have you used to force the boundaries of your SMB model?",
+        "type": "textfield"
+      },
+      {
+        "name": "constraining-observations",
+        "text": "Which observations have you used to constrain your SMB model?",
+        "type": "multi-select",
+
+        "options": [
+          { "text": "Airborne",
+            "value": "airborne",
+            "type": "basic" },
+          { "text": "Ice Cores",
+            "value": "ice-cores",
+            "type": "basic" },
+          { "text": "Snow Pits",
+            "value": "show-pits",
+            "type": "basic" },
+          { "text": "Automatic Weather Stations",
+            "value": "automatic-stations",
+            "type": "basic" },
+          { "text": "Manned Weather Stations",
+            "value": "manned-stations",
+            "type": "basic" },
+          { "text": "Stakes",
+            "value": "takes",
+            "type": "basic" },
+          { "text": "Other (please specify)",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "evaluating-observations",
+        "text": "4. Which independent observations have you used to evaluate your SMB model output?",
+        "type": "multi-select",
+
+        "options": [
+          { "text": "Airborne",
+            "value": "airborne",
+            "type": "basic" },
+          { "text": "Ice Cores",
+            "value": "ice-cores",
+            "type": "basic" },
+          { "text": "Snow Pits",
+            "value": "show-pits",
+            "type": "basic" },
+          { "text": "Automatic Weather Stations",
+            "value": "automatic-stations",
+            "type": "basic" },
+          { "text": "Manned Weather Stations",
+            "value": "manned-stations",
+            "type": "basic" },
+          { "text": "Stakes",
+            "value": "takes",
+            "type": "basic" },
+          { "text": "Other (please specify)",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "methods-and-errors",
+        "text": "5. Upload a document describing your surface mass balance methods and errors in full. This must be either a peer reviewed journal article or a document suitable for review by the IMBIE executive committee. (If you wish to upload multiple files, please upload them as a single .zip file)",
+        "type": "uploads"
+      }
+    ]
+  },
+  {
+    "title": "Additional Experiments",
+    "name": "additional",
+    "text": "The IMBIE SMB experiment group may perform additional analyses to investigate methodological differences in more detail. These experiments are optional. If you wish to participate in the additional experiments, please confirm which data you are contributing.",
+    "order": 4,
+
+    "questions": [
+      {
+        "name": "participating",
+        "text": "6. Do you wish to participate?",
+        "type": "single-select",
+
+        "options": [
+          { "text": "Participating",
+            "value": "yes",
+            "type": "basic",
+            "default": true
+          },
+          { "text": "Not Participating",
+            "value": "no",
+            "type": "basic" }
+        ]
+      },
+      {
+        "name": "component-fields-sheets",
+        "text": "7a. Time-series of surface mass balance component fields, and their associated uncertainties:",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "component-fields-upload",
+        "text": "7b. Upload a data file and a metadata file describing the data file contents and format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads",
+
+        "options": [
+          { "name": "component-fields-data",
+            "text": "Upload a data file",
+            "type": "upload" },
+          { "name": "component-fields-meta",
+            "text": "Upload a metadata file",
+            "type": "upload" }
+        ]
+      },
+      {
+        "name": "gridded-component-fields-sheets",
+        "text": "8a. A gridded time-series of surface mass balance component fields, and their associated uncertainties:",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "gridded-component-fields-upload",
+        "text": "8b. Upload a data file and a metadata file describing the data file contents and format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads",
+
+        "options": [
+          { "name": "gridded-component-fields-data",
+            "text": "Upload a data file",
+            "type": "upload" },
+          { "name": "gridded-component-fields-meta",
+            "text": "Upload a metadata file",
+            "type": "upload" }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Other Information",
+    "name": "information",
+    "text": "",
+    "order": 5,
+
+    "questions": [
+      {
+        "name": "comments",
+        "text": "9. Is there anything else you would like to tell us about in relation to your participation in the IMBIE SMB experiment group?",
+        "type": "textfield"
+      }
+    ]
+  }
+]

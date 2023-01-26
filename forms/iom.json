@@ -1,0 +1,317 @@
+[
+  {
+    "title": "Contact Details",
+    "name": "contact",
+    "text": "Please confirm your contact details",
+    "order": 1,
+
+    "questions": [
+      {
+        "name": "forename",
+        "text": "First Name",
+        "type": "contact"
+      },
+      {
+        "name": "lastname",
+        "text": "Surname",
+        "type": "contact"
+      },
+      {
+        "name": "organisation",
+        "text": "Organisation",
+        "type": "contact"
+      },
+      {
+        "name": "email",
+        "text": "Email Address",
+        "type": "contact"
+      },
+      {
+        "name": "phone",
+        "text": "Telephone Number",
+        "type": "contact"
+      }
+    ]
+  },
+  {
+    "title": "Required Data",
+    "name": "required",
+    "text": "Please confirm which data you are contributing to the IMBIE mass budget experiment group.",
+    "order": 2,
+
+    "questions": [
+      {
+        "name": "time-series-sheets",
+        "text": "1a. Time-series of ice discharge and net inland accumulation, with their respective uncertainties, plus the coordinates of the flux gates through which ice discharge is calculated, computed for basins within the following ice sheet regions:",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "time-series-upload",
+        "text": "1b. Upload a single, concatenated, time-series data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads",
+
+        "options": [
+          { "text": "Annual Ice Discharge",
+            "name": "time-series-discharge-upload",
+            "type": "upload" },
+          { "text": "Annual Net Accumulation",
+            "name": "time-series-accumulation-upload",
+            "type": "upload" },
+          { "text": "Flux Gates Information",
+            "name": "time-series-flux-gates-upload",
+            "type": "upload" },
+          { "text": "Flux Gates Metadata",
+            "name": "time-series-metadata-upload",
+            "type": "upload" }
+        ]
+      },
+      {
+        "name": "discrete-rates-sheets",
+        "text": "2a. Rates of ice discharge and net inland accumulation over discrete epochs, with their respective uncertainties, plus the coordinates of the flux gates through which ice discharge is computed, computed for basins within the following ice sheet regions. <strong>Remember these data will form the basis of our mass balance aggregation, and so you should supply estimates for each region over as many time intervals as your method allows with confidence (your time intervals may overlap).</strong>",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "discrete-rates-upload",
+        "text": "2b. Upload a single, concatenated, rate of mass change data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads",
+
+        "options": [
+          { "text": "Annual Ice Discharge",
+            "name": "discrete-rates-discharge-upload",
+            "type": "upload" },
+          { "text": "Annual Net Accumulation",
+            "name": "discrete-rates-accumulation-upload",
+            "type": "upload" },
+          { "text": "Flux Gates Information",
+            "name": "discrete-rates-flux-gates-upload",
+            "type": "upload" },
+          { "text": "Flux Gates Metadata",
+            "name": "discrete-rates-metadata-upload",
+            "type": "upload" }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Supporting Information",
+    "name": "supporting",
+    "text": "Please answer the following questions in relation to the data set you are submitting to the IMBIE mass budget experiment group.",
+    "order": 3,
+
+    "questions": [
+      {
+        "name": "missions",
+        "text": "3. Which mission(s) have you employed in your ice velocity calculation?",
+        "type": "multi-select",
+
+        "options": [
+          { "text": "ERS-1",
+            "value": "ers-1",
+            "type": "basic" },
+          { "text": "ERS-2",
+            "value": "ers-2",
+            "type": "basic" },
+          { "text": "ENVISAT",
+            "value": "envisat",
+            "type": "basic" },
+          { "text": "ALOS PALSAR",
+            "value": "also-palsar",
+            "type": "basic" },
+          { "text": "TerraSAR-X",
+            "value": "terrasar-x",
+            "type": "basic" },
+          { "text": "COSMO SkyMed",
+            "value": "cosmo-skymed",
+            "type": "basic" },
+          { "text": "RADARSAT-1",
+            "value": "radarsat-1",
+            "type": "basic" },
+          { "text": "RADARSAT-2",
+            "value": "radarsat-2",
+            "type": "basic" },
+          { "text": "Sentinel-1",
+            "value": "sentinel-1",
+            "type": "basic" },
+          { "text": "Landsat-8",
+            "value": "Landsat-8",
+            "type": "basic" },
+          { "text": "Sentinel-2",
+            "value": "sentinel-2",
+            "type": "basic" },
+          { "text": "Other (describe)",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "ice-velocity-methods",
+        "text": "4. Which general method(s) have you employed to compute ice velocity?",
+        "type": "multi-select",
+
+        "options": [
+          { "text": "Intensity feature tracking",
+            "value" : "intensity-features",
+            "type": "basic" },
+          { "text": "Coherent feature tracking",
+            "value" : "coherent-features",
+            "type": "basic" },
+          { "text": "Interferometric phase",
+            "value" : "interferometric-phase",
+            "type": "basic" },
+          { "text": "Other (describe)",
+            "value" : "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "ice-thickness-methods",
+        "text": "5. Which data set(s) have you used to compute ice thickness?",
+        "type": "multi-select",
+
+        "options": [
+          { "text": "Gridded observations (describe)",
+            "value": "gridded",
+            "type": "extra-long" },
+          { "text": "Airborne profiles (describe)",
+            "value": "airborne",
+            "type": "extra-long" },
+          { "text": "Ground-based observations (describe)",
+            "value": "ground-based",
+            "type": "extra-long" },
+          { "text": "Mass conservation model (describe)",
+            "value": "mass-conservation",
+            "type": "extra-long" },
+          { "text": "Other (describe)",
+            "value": "other",
+            "type": "extra-long" }
+        ]
+      },
+      {
+        "name": "ice-thickness-distribution",
+        "text": "6. Is your ice thickness data set available for distribution among the experiment group?",
+        "type": "single-select",
+
+        "options": [
+          { "text": "Available",
+            "value": "yes",
+            "type": "basic",
+            "default": true },
+          { "text": "Not Available",
+            "value": "no",
+            "type": "basic" }
+        ]
+      },
+      {
+        "name": "snow-accumulation-data",
+        "text": "7. Which data set(s) have you employed to compute snow accumulation? Please provide the DOI of the publication where each dataset is described.",
+        "type": "citations"
+      },
+      {
+        "name": "runoff-data",
+        "text": "8. Which data set(s) have you employed to compute runoff? Please provide the DOI of the publication where each dataset is described.",
+        "type": "citations"
+      },
+      {
+        "name": "unobserved-regions",
+        "text": "9. Which general method(s) have you employed to estimate mass balance in unobserved regions?",
+        "type": "multi-select",
+
+        "options": [
+          { "text": "Compute as surface mass balance anomaly in areas where ice discharge is not known",
+            "value": "as-smb-anomaly",
+            "type": "basic" },
+          { "text": "Employ another method to prescribe the impact of ice dynamics in areas where it is not known (describe)",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "independent-observations",
+        "text": "10. Which independent observations have you used to evaluate your ice velocity data?",
+        "type": "multi-select",
+
+        "options": [
+          { "text": "None",
+            "value": "none",
+            "type": "basic",
+            "exclusive": true },
+          { "text": "Airborne",
+            "value": "airborne",
+            "type": "basic" },
+          { "text": "Ground-based",
+            "value": "ground-based",
+            "type": "basic" },
+          { "text": "Independent satellite",
+            "value": "satellite",
+            "type": "basic" },
+          { "text": "Other (describe)",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "methods-and-errors",
+        "text": "11. Upload a doc0ument describing your mass balance methods and errors in full. This must be either a peer reviewed journal article or a document suitable for review by the IMBIE executive committee. (If you wish to upload multiple files, please upload them as a single .zip file)",
+        "type": "uploads"
+      }
+    ]
+  },
+  {
+    "title": "Additional Experiments",
+    "name": "additional",
+    "text": "The IMBIE mass budget experiment group may perform additional analyses to investigate methodological differences in more detail. These experiments are optional. If you wish to participate in the additional experiments, please confirm which data you are contributing.",
+    "order": 4,
+
+    "questions": [
+      {
+        "name": "participating",
+        "text": "12. Do you wish to participate?",
+        "type": "single-select",
+
+        "options": [
+          { "text": "Participating",
+            "value": "yes",
+            "type": "basic",
+            "default": true
+          },
+          { "text": "Not Participating",
+            "value": "no",
+            "type": "basic" }
+        ]
+      },
+      {
+        "name": "thick-and-vel",
+        "text": "13a. Ice thickness and velocity along the flux gate through which ice discharge is computed, and their associated uncertainties:",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "thick-and-vel-upload",
+        "text": "13b. Upload a data file and a metadata file describing the data file contents and format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads",
+
+        "options": [
+          { "name": "thick-and-vel-data",
+            "text": "Upload a data file",
+            "type": "upload" },
+          { "name": "thick-and-vel-meta",
+            "text": "Upload a metadata file",
+            "type": "upload" }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Other Information",
+    "name": "information",
+    "text": "",
+    "order": 5,
+
+    "questions": [
+      {
+        "name": "comments",
+        "text": "14. Is there anything else you would like to tell us about in relation to your submission to the IMBIE mass budget experiment group?",
+        "type": "textfield"
+      }
+    ]
+  }
+]

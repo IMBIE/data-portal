@@ -1,0 +1,262 @@
+[
+  {
+    "title": "Contact Details",
+    "name": "contact",
+    "text": "Please confirm your contact details",
+    "order": 1,
+
+    "questions": [
+      {
+        "name": "forename",
+        "text": "First Name",
+        "type": "contact"
+      },
+      {
+        "name": "lastname",
+        "text": "Surname",
+        "type": "contact"
+      },
+      {
+        "name": "organisation",
+        "text": "Organisation",
+        "type": "contact"
+      },
+      {
+        "name": "email",
+        "text": "Email Address",
+        "type": "contact"
+      },
+      {
+        "name": "phone",
+        "text": "Telephone Number",
+        "type": "contact"
+      }
+    ]
+  },
+  {
+    "title": "Required Data",
+    "name": "required",
+    "text": "Please confirm which data you are contributing towards the IMBIE gravimetry experiment group.",
+    "order": 2,
+
+    "questions": [
+      {
+        "name": "spherical-harmonics-sheets",
+        "text": "1a. Time-series of mass change, mass change uncertainty, and of observed area, computed including corrections for GIA, including Degree 1 contribution, including C20 contribution, and including corrections for leakage.",
+        "type": "ice-sheets",
+        "required": true
+      },
+      {
+        "name": "spherical-harmonics-upload",
+        "text": "1b. Upload a single, concatenated, time-series data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads"
+      },
+      {
+        "name": "mascons-approach-sheets",
+        "text": "2a. Rates of mass change and their uncertainties, and the observed areas and time intervals over which these are calculated, computed including corrections for GIA, including Degree 1 contribution, including C20 contribution, and including corrections for leakage. <strong>Remember these data will form the basis of our mass balance aggregation, and so you should supply estimates for each region over as many time intervals as your method allows with confidence (your time intervals may overlap).</strong>",
+        "type": "ice-sheets",
+        "required": true
+      },
+      {
+        "name": "mascons-approach-upload",
+        "text": "2b. Upload a single, concatenated, time-series data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads"
+      }
+    ]
+  },
+  {
+    "title": "Supporting Information",
+    "name": "supporting",
+    "text": "Please answer the following questions in relation to the data you are submitting to the IMBIE gravimetry experiment group.",
+    "order": 3,
+
+    "questions": [
+      {
+        "name": "general-methods",
+        "text": "3. Which general method(s) have you employed to compute gravimetry mass balance?",
+        "type": "multi-select",
+
+        "options": [
+          { "text": "Spherical Harmonics",
+            "value": "spherical-harmonics",
+            "type": "basic" },
+          { "text": "MASCONS",
+            "value": "mascons",
+            "type": "basic" },
+          { "text": "Other <i>(Please specify)</i>:",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "independent-observations",
+        "text": "4. Which independent observations have you used to evaluate your gravimetry data set?",
+        "type": "multi-select",
+
+        "options": [
+          { "text": "None",
+            "value": "none",
+            "type": "basic",
+            "exclusive": true },
+          { "text": "Airborne",
+            "value": "airborne",
+            "type": "basic" },
+          { "text": "Ground-based",
+            "value": "ground-based",
+            "type": "basic" },
+          { "text": "Independent Satellite",
+            "value": "satellite",
+            "type": "basic" },
+          { "text": "Other <i>(Please specify)</i>:",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "gia-models",
+        "text": "5. Which model(s) have you employed to account for glacial isostatic adjustment in your mass balance calculation?",
+        "type": "citations"
+      },
+      {
+        "name": "hydrology-leakage-models",
+        "text": "6. Which model(s) have you employed to account for hydrology leakage in your mass balance calculation?",
+        "type": "citations"
+      },
+      {
+        "name": "ocean-leakage-models",
+        "text": "7. Which model(s) have you employed to account for ocean leakage in your mass balance calculation?",
+        "type": "citations",
+        "optional": true
+      },
+      {
+        "name": "additional-leakage",
+        "text": "8. Which additional source(s) of leakage have you accounted for in your mass balance calculation?",
+        "type": "textfield"
+      },
+      {
+        "name": "degree-1-coefficients",
+        "text": "9. Which degree 1 coefficients did you employ in your mass balance calculation?",
+        "type": "single-select",
+
+        "options": [
+          { "text": "Swenson et al. 2008 (recommended by IMBIE)",
+            "value": "swenson-et-al",
+            "type": "basic",
+            "default": true },
+          { "text": "Other <i>(please describe)</i>:",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "c20-coefficient",
+        "text": "10. Which C20 coefficient did you employ in your mass balance calculation?",
+        "type": "single-select",
+
+        "options": [
+          { "text": "Cheng et al., 2013 (recommended by IMBIE)",
+            "value": "cheng-et-al",
+            "type": "basic",
+            "default": true },
+          { "text": "Other <i>(Please describe)</i>:",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "methods-and-errors",
+        "text": "11. Upload a document describing your mass balance methods and errors in full. This must be either a peer reviewed journal article or a document suitable for review by the IMBIE executive committee. (If you wish to upload multiple files, please upload them as a single .zip file)",
+        "type": "uploads"
+      }
+    ]
+  },
+  {
+    "title": "Additional Experiments",
+    "name": "additional",
+    "text": "The IMBIE gravimetry experiment group may perform additional analyses to investigate methodological differences in more detail. These experiments are optional. If you wish to participate in the additional experiments, please confirm which data you are contributing.",
+    "order": 4,
+
+    "questions": [
+      {
+        "name": "participating",
+        "text": "12. Do you wish to participate?",
+        "type": "single-select",
+
+        "options": [
+          { "text": "Participating",
+            "value": "yes",
+            "type": "basic",
+            "default": true
+          },
+          { "text": "Not Participating",
+            "value": "no",
+            "type": "basic" }
+        ]
+      },
+      {
+        "name": "mass-change",
+        "text": "13a. Time-series of mass change and mass change uncertainty computed with corrections for temporal changes in surface mass balance:",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "mass-change-upload",
+        "text": "13b. Upload a single, concatenated, time-series data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads"
+      },
+      {
+        "name": "no-gia-sheets",
+        "text": "14a. Time-series of mass change in units of Gt, mass change uncertainty, computed <u>excluding</u> corrections for GIA, including Degree 1 contribution, including C20 contribution, and including corrections for leakage.",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "no-gia-upload",
+        "text": "14b. Upload a single, concatenated, time-series data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads"
+      },
+      {
+        "name": "no-degree-sheets",
+        "text": "14c. Time-series of mass change in units of Gt, mass change uncertainty, computed <u>excluding</u> corrections for GIA, <u>excluding</u> Degree 1 contribution, including C20 contribution, and including corrections for leakage.",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "no-degree-upload",
+        "text": "14d. Upload a single, concatenated, time-series data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads"
+      },
+      {
+        "name": "no-c20-sheets",
+        "text": "14e. Time-series of mass change in units of Gt, mass change uncertainty, computed <u>excluding</u> corrections for GIA, <u>excluding</u> Degree 1 contribution, <u>excluding</u> C20 contribution, and including corrections for leakage.",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "no-c20-upload",
+        "text": "14f. Upload a single, concatenated, time-series data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads"
+      },
+      {
+        "name": "cm-water-sheets",
+        "text": "14g. Time-series of mass change <strong>in units of cm water</strong>, mass change uncertainty, computed <u>excluding</u> corrections for GIA, <u>excluding</u> Degree 1 contribution, <u>excluding</u> C20 contribution, and including corrections for leakage.",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "cm-water-upload",
+        "text": "14h. Upload a single, concatenated, time-series data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "uploads"
+      }
+    ]
+  },
+  {
+    "title": "Other Information",
+    "name": "information",
+    "text": "",
+    "order": 5,
+
+    "questions": [
+      {
+        "name": "comments",
+        "text": "15. Is there anything else you would like to tell us about in relation to your submission to the IMBIE gravimetry experiment group?",
+        "type": "textfield"
+      }
+    ]
+  }
+]

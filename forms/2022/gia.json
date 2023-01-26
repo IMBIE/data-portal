@@ -1,0 +1,211 @@
+[
+  {
+    "title": "Contact Details",
+    "name": "contact",
+    "description": "Personal information",
+    "text": "Please provide your contact details",
+
+    "elements": [
+      {
+        "name": "forename",
+        "label": "First Name",
+        "type": "input"
+      },
+      {
+        "name": "lastname",
+        "label": "Surname",
+        "type": "input"
+      },
+      {
+        "name": "organisation",
+        "label": "Organisation",
+        "type": "input"
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "helper": "Email address at which we may contact you regarding your submission"
+      }
+    ]
+  },
+  {
+    "title": "Required Data",
+    "name": "required",
+    "text": "Please confirm which data you are contributing to the IMBIE GIA experiment group.",
+
+    "elements": [
+      {
+        "name": "uplift-rates-sheets",
+        "label": "1a. Uplift rates and their associated uncertainties, distributed on a 0.5 degree grid:",
+        "type": "checkbox",
+        "helper": "please select the areas covered by the uplift rates data you are uploading.",
+        "options": [
+          { "value": "eais", "label": "East Antartica Ice Sheet" },
+          { "value": "wais", "label": "West Antartica Ice Sheet" },
+          { "value": "apis", "label": "Antartic Peninsula Ice Sheet" },
+          {
+            "value": "ais",
+            "label": "Antarctic Ice Sheet (if you provide estimates over all its sub-ice sheets, please also provide the total over the Antarctic Ice Sheet)."
+          },
+          { "value": "gris", "label": "Greenland Ice Sheet" }
+        ]
+      },
+      {
+        "name": "uplift-rates-upload",
+        "label": "1b. Upload a data file and a metadata file describing the data file contents and format.",
+        "type": "multi-file",
+
+        "items": [
+          {
+            "name": "uplift-rates-data",
+            "label": "Upload a data file"
+          },
+          {
+            "name": "uplift-rates-meta",
+            "label": "Upload a metadata file"
+          }
+        ]
+      },
+      {
+        "name": "stokes-coefficients-provided",
+        "label": "2a. Stokes coefficients at least up to degree and order 90:",
+        "type": "select",
+
+        "options": [
+          {
+            "label": "Provided",
+            "value": "yes"
+          },
+          { "label": "Not Provided", "value": "no" }
+        ]
+      },
+      {
+        "name": "stokes-coefficients-upload",
+        "label": "2b. Upload a data file and a metadata file describing the data file contents and format.",
+        "type": "multi-file",
+
+        "items": [
+          {
+            "name": "stokes-coefficients-data",
+            "label": "Upload a data file"
+          },
+          {
+            "name": "stokes-coefficients-meta",
+            "label": "Upload a metadata file"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Supporting Information",
+    "name": "supporting",
+    "text": "Please answer the following questions in relation to the data set you are submitting to the IMBIE GIA experiment group.",
+
+    "elements": [
+      {
+        "name": "created-aspects",
+        "label": "3. Which aspect(s) of your GIA solution have you created?",
+        "type": "checkbox",
+
+        "options": [
+          {
+            "label": "The Ice History Model",
+            "value": "ice-history"
+          },
+          { "label": "The Earth Model", "value": "earth" },
+          {
+            "label": "Approach to sea-level loading and self-gravitation",
+            "value": "sea-and-gravitation"
+          },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "ice-history-model",
+        "label": "4. Which ice history model have you employed in your GIA solution (including far field ice)?",
+        "type": "radio",
+
+        "options": [
+          {
+            "label": "Own model (to be described in supporting information)",
+            "value": "own-model"
+          },
+          {
+            "label": "Other (provide citation DOI)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "earth-model",
+        "label": "5. Which Earth model have you employed in your GIA solution?",
+        "type": "radio",
+
+        "options": [
+          {
+            "label": "Own model (to be described in supporting information)",
+            "value": "own-model",
+            "type": "basic"
+          },
+          {
+            "label": "Other (provide citation DOI)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "gia-code",
+        "label": "6. What code have you used to produce the GIA solution?",
+        "type": "radio",
+
+        "options": [
+          {
+            "label": "Own code (to be described in supporting information)",
+            "value": "own-code"
+          },
+          {
+            "label": "Other (provide citation DOI)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "rebound-data",
+        "label": "7. Which rebound data (e.g. GPS or relative sea level, giving details of publications or online data sets) have you used to evaluate your GIA solution?",
+        "type": "textarea"
+      },
+      {
+        "name": "other-constraints",
+        "label": "8. Which other types of data have been used to constrain your GIA solution?",
+        "type": "textarea"
+      },
+      {
+        "name": "methods-and-errors",
+        "label": "9. Please provide the doi of a peer-reviewed article describing your methods and errors in full. In case your methods have not been published yet, please upload a document describing those for the IMBIE Executive Committee to review. (If you wish to upload multiple files, please upload them as a single .zip file)",
+        "type": "cite-upload"
+      }
+    ]
+  },
+  {
+    "title": "Other Information",
+    "name": "information",
+    "label": "",
+
+    "elements": [
+      {
+        "name": "comments",
+        "label": "10. Is there anything else you would like to tell us about in relation to your participation in the IMBIE GIA experiment group?",
+        "type": "textarea"
+      }
+    ]
+  }
+]

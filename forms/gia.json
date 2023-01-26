@@ -1,0 +1,194 @@
+[
+  {
+    "title": "Contact Details",
+    "name": "contact",
+    "text": "Please confirm your contact details",
+    "order": 1,
+
+    "questions": [
+      {
+        "name": "forename",
+        "text": "First Name",
+        "type": "contact"
+      },
+      {
+        "name": "lastname",
+        "text": "Surname",
+        "type": "contact"
+      },
+      {
+        "name": "organisation",
+        "text": "Organisation",
+        "type": "contact"
+      },
+      {
+        "name": "email",
+        "text": "Email Address",
+        "type": "contact"
+      },
+      {
+        "name": "phone",
+        "text": "Telephone Number",
+        "type": "contact"
+      }
+    ]
+  },
+  {
+    "title": "Required Data",
+    "name": "required",
+    "text": "Please confirm which data you are contributing to the IMBIE GIA experiment group.",
+    "order": 2,
+
+    "questions": [
+      {
+        "name": "uplift-rates-sheets",
+        "text": "1a. Uplift rates and their associated uncertainties, distributed on a 0.5 degree grid:",
+        "type": "ice-sheets"
+      },
+      {
+        "name": "uplift-rates-upload",
+        "text": "1b. Upload a data file and a metadata file describing the data file contents and format.",
+        "type": "uploads",
+
+        "options": [
+          { "name": "uplift-rates-data",
+            "text": "Upload a data file",
+            "type": "upload" },
+          { "name": "uplift-rates-meta",
+            "text": "Upload a metadata file",
+            "type": "upload" }
+        ]
+      },
+      {
+        "name": "stokes-coefficients-provided",
+        "text": "2a. Stokes coefficients at least up to degree and order 90:",
+        "type": "single-select",
+
+        "options": [
+          { "text": "Provided",
+            "value": "yes",
+            "type": "basic",
+            "default": true
+          },
+          { "text": "Not Provided",
+            "value": "no",
+            "type": "basic" }
+        ]
+      },
+      {
+        "name": "stokes-coefficients-upload",
+        "text": "2b. Upload a data file and a metadata file describing the data file contents and format.",
+        "type": "uploads",
+
+        "options": [
+          { "name": "stokes-coefficients-data",
+            "text": "Upload a data file",
+            "type": "upload" },
+          { "name": "stokes-coefficients-meta",
+            "text": "Upload a metadata file",
+            "type": "upload" }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Supporting Information",
+    "name": "supporting",
+    "text": "Please answer the following questions in relation to the data set you are submitting to the IMBIE GIA experiment group.",
+    "order": 3,
+
+    "questions": [
+      {
+        "name": "created-aspects",
+        "text": "3. Which aspect(s) of your GIA solution have you created?",
+        "type": "multi-select",
+
+        "options": [
+          { "text": "The Ice History Model",
+            "value": "ice-history",
+            "type": "basic" },
+          { "text": "The Earth Model",
+            "value": "earth",
+            "type": "basic" },
+          { "text": "Approach to sea-level loading and self-gravitation",
+            "value": "sea-and-gravitation",
+            "type": "basic" },
+          { "text": "Other (please specify)",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "ice-history-model",
+        "text": "4. Which ice history model have you employed in your GIA solution (including far field ice)?",
+        "type": "single-select",
+
+        "options": [
+          { "text": "Own model (to be described in supporting information)",
+            "value": "own-model",
+            "type": "basic" },
+          { "text": "Other (provide citation DOI)",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "earth-model",
+        "text": "5. Which Earth model have you employed in your GIA solution?",
+        "type": "single-select",
+
+        "options": [
+          { "text": "Own model (to be described in supporting information)",
+            "value": "own-model",
+            "type": "basic" },
+          { "text": "Other (provide citation DOI)",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "gia-code",
+        "text": "6. What code have you used to produce the GIA solution?",
+        "type": "single-select",
+
+        "options": [
+          { "text": "Own code (to be described in supporting information)",
+            "value": "own-code",
+            "type": "basic" },
+          { "text": "Other (provide citation DOI)",
+            "value": "other",
+            "type": "extra" }
+        ]
+      },
+      {
+        "name": "rebound-data",
+        "text": "7. Which rebound data (e.g. GPS or relative sea level, giving details of publications or online data sets) have you used to evaluate your GIA solution?",
+        "type": "textfield"
+      },
+      {
+        "name": "other-constraints",
+        "text": "8. Which other types of data have been used to constrain your GIA solution?",
+        "type": "textfield"
+      },
+      {
+        "name": "methods-and-errors",
+        "text": "9. Upload a document describing your GIA methods and errors in full. This must be either a peer reviewed journal article or a document suitable for review by the IMBIE executive committee. (If you wish to upload multiple files, please upload them as a single .zip file)",
+        "type": "uploads"
+      }
+    ]
+  },
+  {
+    "title": "Other Information",
+    "name": "information",
+    "text": "",
+    "order": 4,
+
+    "questions": [
+      {
+        "name": "comments",
+        "text": "10. Is there anything else you would like to tell us about in relation to your participation in the IMBIE GIA experiment group?",
+        "type": "textfield"
+      }
+    ]
+  }
+]

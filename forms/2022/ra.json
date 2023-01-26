@@ -1,0 +1,274 @@
+[
+  {
+    "title": "Contact Details",
+    "name": "contact",
+    "description": "Personal information",
+    "text": "Please provide your contact details",
+
+    "elements": [
+      {
+        "name": "forename",
+        "label": "First Name",
+        "type": "input"
+      },
+      {
+        "name": "lastname",
+        "label": "Surname",
+        "type": "input"
+      },
+      {
+        "name": "organisation",
+        "label": "Organisation",
+        "type": "input"
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "helper": "Email address at which we may contact you regarding your submission"
+      }
+    ]
+  },
+  {
+    "title": "Required Data",
+    "name": "required",
+    "description": "IMBIE Altimetry data upload",
+    "text": "Please confirm which data you are contributing to the IMBIE altimetry experiment group.",
+
+    "elements": [
+      {
+        "name": "time-series-sheets",
+        "label": "1a. Time-series of mass change, mass change uncertainty, and of observed area:",
+        "type": "checkbox",
+        "helper": "please select the areas covered by the mass change time-series data you are uploading.",
+        "options": [
+          { "value": "eais", "label": "East Antartica Ice Sheet" },
+          { "value": "wais", "label": "West Antartica Ice Sheet" },
+          { "value": "apis", "label": "Antartic Peninsula Ice Sheet" },
+          {
+            "value": "ais",
+            "label": "Antarctic Ice Sheet (if you provide estimates over all its sub-ice sheets, please also provide the total over the Antarctic Ice Sheet)."
+          },
+          { "value": "gris", "label": "Greenland Ice Sheet" }
+        ]
+      },
+      {
+        "name": "time-series-excludes-caps",
+        "label": "1b. The IMBIE assessment should cover the ice sheets only and exclude their ice caps and peripheral glaciers. Does your dataset exclude those?",
+        "type": "select",
+        "options": [
+          { "label": "Yes", "value": "yes" },
+          { "label": "No", "value": "no" }
+        ]
+      },
+      {
+        "name": "time-series-upload",
+        "label": "1c. Upload a single, concatenated, time-series data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval. If you provide time-series over all the basins that make up an ice sheet, please also provide the total mass change for the corresponding ice sheet.",
+        "type": "file"
+      },
+      {
+        "name": "mean-rate-sheets",
+        "label": "2a. Rates of mass change and their uncertainties, and the observed areas and time intervals over which these are calculated. Please provide discrete rates of mass change (no overlapping time intervals) at the finest temporal resolution afforded by your dataset, preferably over annual epochs or finer temporal duration. If you submit annual rates of mass change, please provide summer-centred rates.",
+        "type": "checkbox",
+        "helper": "please select the areas covered by the rate of mass change data you are uploading.",
+        "options": [
+          { "value": "eais", "label": "East Antartica Ice Sheet" },
+          { "value": "wais", "label": "West Antartica Ice Sheet" },
+          { "value": "apis", "label": "Antartic Peninsula Ice Sheet" },
+          {
+            "value": "ais",
+            "label": "Antarctic Ice Sheet (if you provide estimates over all its sub-ice sheets, please also provide the total over the Antarctic Ice Sheet)."
+          },
+          { "value": "gris", "label": "Greenland Ice Sheet" }
+        ]
+      },
+      {
+        "name": "mean-rate-excludes-caps",
+        "label": "2b. The IMBIE assessment should cover the ice sheets only and exclude their ice caps and peripheral glaciers. Does your dataset exclude those?",
+        "type": "select",
+        "options": [
+          { "label": "Yes", "value": "yes" },
+          { "label": "No", "value": "no" }
+        ]
+      },
+      {
+        "name": "mean-rate-upload",
+        "label": "2c. Upload a single, concatenated, rate of mass change data file, following the IMBIE standard file format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval. If you provide rates of mass change over all the basins that make up an ice sheet, please also provide the rates of total mass change for the corresponding ice sheet.",
+        "type": "file"
+      }
+    ]
+  },
+  {
+    "title": "Supporting Information",
+    "name": "supporting",
+    "description": "Additional metadata about your submission",
+    "text": "Please answer the following questions relating to the data set you are submitting to the IMBIE altimetry experiment group.",
+
+    "elements": [
+      {
+        "name": "missions",
+        "label": "3. Which mission(s) have you employed in your altimetry mass balance calculation?",
+        "type": "checkbox",
+
+        "options": [
+          { "label": "Seasat", "value": "seasat" },
+          { "label": "Geosat", "value": "geosat" },
+          { "label": "ERS-1", "value": "ers-1" },
+          { "label": "ERS-2", "value": "ers-2" },
+          { "label": "ENVISAT", "value": "envisat" },
+          { "label": "ICESat", "value": "icesat" },
+          { "label": "CryoSat-2", "value": "cryosat-2" },
+          { "label": "Altika", "value": "altika" },
+          { "label": "Sentinel-3", "value": "sentinel-3" },
+          { "label": "ICESat-2", "value": "icesat-2" },
+          { "label": "Airborne", "value": "airborne" },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "elevation-methods",
+        "label": "4. Which general method(s) have you employed to compute elevation changes?",
+        "type": "checkbox",
+
+        "options": [
+          { "label": "Cross-overs", "value": "cross-overs" },
+          { "label": "Repeat Track", "value": "repeat-track" },
+          { "label": "Plane Fit", "value": "plane-fit" },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "unobserved-methods",
+        "label": "5. Which general method(s) have you employed to estimate elevation changes in unobserved regions?",
+        "type": "checkbox",
+
+        "options": [
+          {
+            "label": "Scaling according to ratio of basin area to observed area",
+            "value": "scaling"
+          },
+          {
+            "label": "Interpolation",
+            "value": "interpolation"
+          },
+          {
+            "label": "Assign Specific Value",
+            "value": "specific-value"
+          },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "independant-observations",
+        "label": "6. Which independent observations have you used to evaluate the elevations rates you have determined from altimetry?",
+        "type": "checkbox",
+
+        "options": [
+          { "label": "Airborne", "value": "airborne" },
+          { "label": "Ground-based", "value": "ground-based" },
+          {
+            "label": "Independent Satellite",
+            "value": "satellite"
+          },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "gia-models",
+        "label": "7. Which model(s) have you employed to account for glacial isostatic adjustment in your mass balance calculation?",
+        "type": "citations"
+      },
+      {
+        "name": "icesat-methods",
+        "label": "8. Which general method(s) have you employed to account for ICESat inter-campaign bias?",
+        "type": "checkbox",
+
+        "options": [
+          { "label": "Not Applicable", "value": "n-a" },
+          { "label": "None", "value": "none" },
+          {
+            "label": "Applied Gaussian-Centroid correction to data that did not include it",
+            "value": "gaussian-centroid"
+          },
+          {
+            "label": "Correction based on a target outside the study area",
+            "value": "outside-area"
+          },
+          {
+            "label": "Correction from the scientific literature (provide citation)",
+            "value": "citation",
+            "editable": true
+          },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "mass-change-methods",
+        "label": "9. Which general method(s) have you employed to compute ice sheet mass changes from ice sheet volume changes?",
+        "type": "checkbox",
+
+        "options": [
+          {
+            "label": "Constant/Uniform Density",
+            "value": "constant"
+          },
+          {
+            "label": "Spatially variable, temporally constant density",
+            "value": "space-variable"
+          },
+          {
+            "label": "Firn model driven by climate or reanalysis data",
+            "value": "firn-climate"
+          },
+          {
+            "label": "Firn model driven by other data",
+            "value": "firn-other"
+          },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "methods-and-errors",
+        "label": "10. Please provide the doi of a peer-reviewed article describing your methods and errors in full. In case your methods have not been published yet, please upload a document describing those for the IMBIE Executive Committee to review. (If you wish to upload multiple files, please upload them as a single .zip file)",
+        "type": "cite-upload"
+      }
+    ]
+  },
+  {
+    "title": "Other Information",
+    "name": "information",
+    "description": "Any other comments about your submission",
+
+    "elements": [
+      {
+        "name": "comments",
+        "label": "11. Is there anything else you would like to tell us about in relation to your submission to the IMBIE altimetry experiment group?",
+        "type": "textarea"
+      }
+    ]
+  }
+]

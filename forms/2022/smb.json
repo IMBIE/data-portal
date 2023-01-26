@@ -1,0 +1,172 @@
+[
+  {
+    "title": "Contact Details",
+    "name": "contact",
+    "description": "Personal information",
+    "text": "Please provide your contact details",
+
+    "elements": [
+      {
+        "name": "forename",
+        "label": "First Name",
+        "type": "input"
+      },
+      {
+        "name": "lastname",
+        "label": "Surname",
+        "type": "input"
+      },
+      {
+        "name": "organisation",
+        "label": "Organisation",
+        "type": "input"
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "helper": "Email address at which we may contact you regarding your submission"
+      }
+    ]
+  },
+  {
+    "title": "Required Data",
+    "name": "required",
+    "text": "Please indicate which data you are contributing to the IMBIE SMB experiment group.",
+
+    "elements": [
+      {
+        "name": "mass-balance-sheets",
+        "label": "1a. Time-series of surface mass balance, and its associated uncertainty:",
+        "type": "checkbox",
+        "helper": "please select the areas covered by the mass balance time-series data you are uploading.",
+        "options": [
+          { "value": "eais", "label": "East Antartica Ice Sheet" },
+          { "value": "wais", "label": "West Antartica Ice Sheet" },
+          { "value": "apis", "label": "Antartic Peninsula Ice Sheet" },
+          {
+            "value": "ais",
+            "label": "Antarctic Ice Sheet (if you provide estimates over all its sub-ice sheets, please also provide the total over the Antarctic Ice Sheet)."
+          },
+          { "value": "gris", "label": "Greenland Ice Sheet" }
+        ]
+      },
+      {
+        "name": "mass-balance-peripheral-glaciers",
+        "label": "1b. Does your dataset cover peripheral glaciers?",
+        "type": "select",
+        "options": [
+          { "label": "Yes", "value": "yes" },
+          { "label": "No", "value": "no" }
+        ]
+      },
+      {
+        "name": "mass-balance-upload",
+        "label": "1c. Upload a data file and a metadata file describing the data file contents and format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "file"
+      },
+      {
+        "name": "gridded-mass-balance-sheets",
+        "label": "2a. A gridded time-series of surface mass balance, and its associated uncertainty. <strong>Remember these data will form the basis of our mass balance aggregation, and so you should supply estimates for each region over as many time intervals as your method allows with confidence (your time intervals may overlap).</strong>",
+        "type": "checkbox",
+        "helper": "please select the areas covered by the gridded mass balance time-series data you are uploading.",
+        "options": [
+          { "value": "eais", "label": "East Antartica Ice Sheet" },
+          { "value": "wais", "label": "West Antartica Ice Sheet" },
+          { "value": "apis", "label": "Antartic Peninsula Ice Sheet" },
+          {
+            "value": "ais",
+            "label": "Antarctic Ice Sheet (if you provide estimates over all its sub-ice sheets, please also provide the total over the Antarctic Ice Sheet)."
+          },
+          { "value": "gris", "label": "Greenland Ice Sheet" }
+        ]
+      },
+      {
+        "name": "gridded-mass-balance-upload",
+        "label": "2b. Upload a data file and a metadata file describing the data file contents and format. Please do not apply any temporal smoothing to your data, other than that required as part of your basic retrieval.",
+        "type": "file"
+      }
+    ]
+  },
+  {
+    "title": "Supporting Information",
+    "name": "supporting",
+    "text": "Please answer the following questions relating to the data set you are submitting to the IMBIE SMB experiment group.",
+    "order": 3,
+
+    "elements": [
+      {
+        "name": "boundaries-data",
+        "label": "3. Which meteorological data have you used to force the boundaries of your SMB model?",
+        "type": "textarea"
+      },
+      {
+        "name": "constraining-observations",
+        "label": "Which observations have you used to constrain your SMB model?",
+        "type": "checkbox",
+
+        "options": [
+          { "label": "Airborne", "value": "airborne" },
+          { "label": "Ice Cores", "value": "ice-cores" },
+          { "label": "Snow Pits", "value": "show-pits" },
+          {
+            "label": "Automatic Weather Stations",
+            "value": "automatic-stations"
+          },
+          {
+            "label": "Manned Weather Stations",
+            "value": "manned-stations"
+          },
+          { "label": "Stakes", "value": "stakes" },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "evaluating-observations",
+        "label": "4. Which independent observations have you used to evaluate your SMB model output?",
+        "type": "checkbox",
+
+        "options": [
+          { "label": "Airborne", "value": "airborne" },
+          { "label": "Ice Cores", "value": "ice-cores" },
+          { "label": "Snow Pits", "value": "show-pits" },
+          {
+            "label": "Automatic Weather Stations",
+            "value": "automatic-stations"
+          },
+          {
+            "label": "Manned Weather Stations",
+            "value": "manned-stations"
+          },
+          { "label": "Stakes", "value": "stakes" },
+          {
+            "label": "Other (please specify)",
+            "value": "other",
+            "editable": true
+          }
+        ]
+      },
+      {
+        "name": "methods-and-errors",
+        "label": "5. Please provide the doi of a peer-reviewed article describing your methods and errors in full. In case your methods have not been published yet, please upload a document describing those for the IMBIE Executive Committee to review. (If you wish to upload multiple files, please upload them as a single .zip file)",
+        "type": "cite-upload"
+      }
+    ]
+  },
+  {
+    "title": "Other Information",
+    "name": "information",
+    "text": "",
+    "elements": [
+      {
+        "name": "comments",
+        "label": "9. Is there anything else you would like to tell us about in relation to your participation in the IMBIE SMB experiment group?",
+        "type": "textarea"
+      }
+    ]
+  }
+]
